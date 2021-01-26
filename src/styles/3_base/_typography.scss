@@ -1,0 +1,44 @@
+html{
+    font-size: 16px;
+}
+body{
+    font-family: var(--font-family-sans-serif);
+    font-weight: normal;
+    font-size: 1rem;
+    line-height: 1.5;
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: var(--font-semibold);
+}
+
+h1{
+    
+    font-size: 18vw;
+    line-height: 0.8;
+    letter-spacing: -3px;
+    font-weight: var(--font-bold);
+
+    @include media-breakpoints($breakpoint-md) {
+        font-size: 13vw;
+        letter-spacing: -9px;
+    }
+
+}
+
+h2{
+    font-size: 2.5rem;
+    line-height: 2.875rem;
+}
+h3{
+    font-size: 1.4rem;
+    line-height: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+
+
+h6{
+    font-size: 1rem;
+}

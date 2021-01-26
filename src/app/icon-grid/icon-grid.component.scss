@@ -1,0 +1,77 @@
+@import '../../styles/1_helpers/mixins';
+
+
+.icon-wrapper {
+  position: relative;
+  padding: 2rem 0  3rem 0;
+  border-radius: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  cursor: pointer;
+  text-align: center;
+
+
+  .hover-menu {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0.5rem;
+    z-index: 1;
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+  }
+
+  &:hover {
+    background-color: rgb(255, 255, 255, 0.3);
+    backdrop-filter: blur(6px);
+    @include transition(transform, 100ms);
+
+    .hover-menu {
+      opacity: 1;
+    }
+
+    .icon {
+      opacity: 0.9;
+
+    }
+
+  }
+}
+
+.icon {
+  color: var(--text-primary);
+}
+
+.btn-container {
+  display: flex;
+  width: 100%;
+}
+
+.btn-copy {
+  border-radius: 0;
+  margin: 0;
+  background: transparent;
+  border-top: 1px solid #ccc;
+  font-size: 0.75rem;
+
+}
+
+.btn-copy-left {
+  border-bottom-left-radius: 0.5rem;
+  border-right: 0.5px solid rgb(228, 228, 228);
+}
+
+.btn-copy-right {
+  border-bottom-right-radius: 0.5rem;
+  border-left: 0.5px solid #ccc;
+}

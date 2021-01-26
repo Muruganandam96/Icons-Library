@@ -1,0 +1,90 @@
+// Utilities : Paddings, Margins
+
+$spaces: (0, 1, 2, 3, 4, 5, 6);
+$sides: (top, right, bottom, left);
+
+@each $space in $spaces {
+  .m-#{$space} {
+    margin: #{$space * .25}rem;
+  }
+
+  .p-#{$space} {
+    padding: #{$space * .25}rem;
+  }
+
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$space} {
+      margin-#{$side}: #{$space * .25}rem !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$space} {
+      padding-#{$side}: #{$space * .25}rem !important;
+    }
+  }
+}
+
+.container {
+  padding-right: var(--padding-mobile);
+  padding-left: var(--padding-mobile);
+
+  @include media-breakpoints($breakpoint-lg) {
+    padding-right: var(--padding-desktop);
+    padding-left: var(--padding-desktop);
+  }
+
+}
+
+.text-primary {
+  color: var(--text-primary);
+}
+
+.text-secondary {
+  color: var(--text-secondary);
+}
+
+.bg-color {
+  background-color: var(--bg-color);
+}
+
+.bg-muted {
+  background-color: var(--bg-muted);
+}
+
+.bg-highlight {
+  background-color: var(--bg-highlight);
+}
+
+.btn-shadow {
+  box-shadow: 4px 4px 0 0 var(--primary);
+}
+
+.slide-up {
+    @include transition(transform, 200ms);
+
+    &:hover {
+        transform: translateY(-2px);
+    }
+}
+
+
+.slide-up-1 {
+  @include transition(transform, 200ms);
+
+  &:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 10px 6px 0px rgba(0,0,0,0.16);
+
+  }
+}
+
+.pixel-background {
+    background: url('../../assets/background.svg') repeat ;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.d-block {
+  display: block;
+}

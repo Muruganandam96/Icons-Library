@@ -1,0 +1,143 @@
+@import '../../styles/1_helpers/variables';
+@import '../../styles/1_helpers/mixins';
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+
+
+  .hero-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 5.5rem 0;
+    position: relative;
+
+    &::before {
+      content: ' ';
+      background: url('../../assets/pen-graphic.svg') no-repeat;
+      width: 100%;
+      height: 80%;
+      position: absolute;
+      left: 0%;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      z-index: 1;
+      display: none;
+      background-position: 100% 100%;
+
+    }
+
+    @include media-breakpoints($breakpoint-lg) {
+      flex-wrap: nowrap;
+
+      &::before {
+        background-position: 93% -10%;
+        display: block;
+        opacity: 1;
+      }
+    }
+  }
+
+  .header-intro {
+    flex: 0 0 100%;
+    z-index: 2;
+
+
+  }
+
+  .intro {
+    font-size: 1.125rem;
+    font-weight: var(--font-medium);
+  }
+
+  .headline {
+    width: 100%;
+    font-size: 1.5rem;
+    opacity: 0.8;
+    line-height: 1.5rem;
+    font-weight: var(--font-regular);
+
+    @include media-breakpoints($breakpoint-lg) {
+      width: 50%;
+    }
+
+  }
+}
+
+.card {
+  background-color: var(--bg-color);
+  border: 1px solid var(--primary);
+  width: 40vw;
+  height: 600px;
+  transform: translateX(-20px);
+}
+
+.actions {
+  display: flex;
+
+  .btn-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+
+  }
+}
+
+.circle-text {
+  position: absolute;
+  top: 0;
+  left: 20%;
+  bottom: 45%;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  animation: giro 24s infinite linear;
+  transform-origin: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @include media-breakpoints($breakpoint-md) {
+    top: 0;
+    left: 57%;
+    bottom: 45%;
+    right: 0;
+  }
+
+  img {
+    width: 40%;
+    height: auto;
+
+    @include media-breakpoints($breakpoint-md) {
+      width: 30%;
+      height: auto;
+    }
+
+    @include media-breakpoints($breakpoint-lg) {
+      width: 20%;
+      height: auto;
+    }
+  }
+
+
+}
+
+@keyframes giro {
+  100% {
+    transform: rotate(1turn)
+  }
+
+  ;
+}

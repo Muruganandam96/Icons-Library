@@ -1,0 +1,74 @@
+[
+    {
+        "name": "Ant Icons",
+        "type": [
+            "filled",
+            "outlined",
+            "duotoned"
+        ],
+        "typeDetail": {
+            "filled": "AntIconFilled",
+            "outlined": "AntIconOutlined",
+            "duotoned": "AntIconDuotone"
+        },
+        "image": "../assets/logo/ant.svg",
+        "license": "MIT",
+        "repoUrl": ""
+    },
+    {
+        "name": "Bootstrap Icons",
+        "type": [
+            "filled",
+            "outlined"
+        ],
+        "typeDetail": {
+            "filled": "BootstrapFilled",
+            "outlined": "BootstrapOutlined"
+        },
+        "image": "../assets/logo/bootstrap.svg",
+        "license": "MIT",
+        "repoUrl": ""
+    },
+    {
+        "name": "Feather Icons",
+        "type": [
+            "outlined"
+        ],
+        "typeDetail": {
+            "outlined": "Feather"
+        },
+        "image": "../assets/logo/feather.svg",
+        "license": "MIT",
+        "repoUrl": ""
+    },
+    {
+        "name": "Font Awesome",
+        "type": [
+            "filled",
+            "outlined",
+            "brands"
+        ],
+        "typeDetail": {
+            "filled": "FontAwesomeFilled",
+            "outlined": "FontAwesomeOutlined",
+            "brands": "FontAwesomeBrands"
+        },
+        "image": "../assets/logo/fontawesome.svg",
+        "license": "MIT",
+        "repoUrl": ""
+    },
+    {
+        "name": "Hero Icons",
+        "type": [
+            "filled",
+            "outlined"
+        ],
+        "typeDetail": {
+            "filled": "HeroSolid",
+            "outlined": "HeroOutlined"
+        },
+        "image": "../assets/logo/hero.svg",
+        "license": "MIT",
+        "repoUrl": ""
+    }
+]

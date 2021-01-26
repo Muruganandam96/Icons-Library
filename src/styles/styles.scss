@@ -1,0 +1,84 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --primary: #333;
+  --secondary: #F7C945;
+  --accent: #27C271;
+  --text-primary: #333;
+  --text-secondary: #636970;
+  --bg-color: #d9e2ee;
+  --bg-muted: #F1EDE9;
+  --bg-muted: #fafafa;
+  --bg-highlight: #323232;
+  --bg-neutral: #E2DEDA;
+  --font-family-sans-serif: 'Manrope', sans-serif;
+  --font-extrabold: 800;
+  --font-bold: 700;
+  --font-semibold: 600;
+  --font-medium: 500;
+  --font-regular: 400;
+  --padding-desktop: 48px;
+  --padding-mobile: 16px;
+}
+
+//   [data-theme="dark"] {
+
+// }
+
+@import '1_helpers/variables';
+@import '1_helpers/mixins';
+@import '1_helpers/utils';
+@import '2_tools/reset';
+@import '3_base/typography';
+@import '4_components/buttons';
+
+
+
+
+
+
+body {
+  overflow-x: hidden;
+  background-color: #d9e2ee;
+}
+
+.copyText {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--primary);
+  background: var(--bg-color);
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  color: var(--text-primary);
+}
+
+
+p.icon-label {
+  padding-top: 0.45rem !important;
+  user-select: none;
+  @include transition(400ms, ease-in);
+  width: 100px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+}
+
+.icon svg {
+  @include transition(400ms, ease-in-out);
+}
+
+
+.icon-wrapper:hover {
+  svg {
+    transform: scale(1.8);
+  }
+
+  p {
+    opacity: 0;
+  }
+}

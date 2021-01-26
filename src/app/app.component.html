@@ -1,0 +1,71 @@
+<header class="container  header" >
+    <app-header></app-header>
+</header>
+
+<main class="main-section">
+	<div class="sticky">
+		<div class="library-details container pt-0 pb-0" *ngIf="!showSearch">
+			<div class="pt-3 pb-2 library">
+				<div appdropdown>
+					<div class="library-name">
+						<img class="nav-icon" [src]="LibraryObj.image" [alt]="LibraryObj.name">
+						<span class="pl-3 pr-3">{{ LibraryObj.name }}</span>
+						<img src="assets/arrow.svg" alt="">
+					</div>
+					<ul class="navbar">
+						<li class="nav-item" 
+							[attr.data-icon-library]="library.name" 
+							[ngClass] = "{'active': library.active}"
+							*ngFor= "let library of libraries" >
+							<a class="nav-link " (click)="getSelectedLibrary(library)">
+								<img class="nav-icon logo" [src]="library.image"  [alt]="library.name">
+								<span class="pl-3">{{library.name}}</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+
+			</div>
+			<div class="search" (click)="showSearchBar()">
+				<img src="assets/search.svg" alt="Search Icon">
+				<span class="pl-3">Search</span>
+			</div>
+			<ul class="icon-type">
+				<li class="filter-item" *ngFor="let filter of iconType">
+					<a class="btn btn-small"
+					   (click) ="filterIcons(filter.type)"
+					   [ngClass] ="{ 'active': filter.active}">
+					   {{ filter.type | titlecase }}
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="search-container container" *ngIf="showSearch">
+			<img src="assets/search.svg" width="24px" height="24px" alt="Search Icon">
+			<form class="search-form" (ngSubmit)="searchIcon()" #searchForm="ngForm">
+				<input class="form-control" type="search" 
+				placeholder="Search"
+				autofocus
+				name="searchModel" [(ngModel)]="searchModel">
+			</form>
+			<a class="btn btn-link" (click)="showSearchBar()">Cancel</a>
+		</div>
+	</div>
+
+	<div class="icon-grid ml-4 mr-4 mb-6 mt-4 pt-4" *ngIf="iconsList.length">
+		<app-icon-grid [svg]="icon.svg" [IconName]= "icon.name"  *ngFor="let icon of iconsList"></app-icon-grid>
+	</div>
+	<div class="no-results" *ngIf="noresult && showSearch">
+		<img src="assets/noresults.svg" alt="">
+		<h3 class="pt-6">No results found!</h3>
+		<p class="pt-4">We can't find any item matching your search.</p>
+	</div>
+	<div class="type-something" *ngIf="!this.searchModel && !noresult && showSearch">
+		<img src="assets/typing.svg" alt="">
+		<h3 class="pt-6">Type something to search</h3>
+	</div>
+</main>
+
+<footer>
+
+</footer>

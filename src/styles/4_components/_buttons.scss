@@ -1,0 +1,48 @@
+.btn {
+  cursor: pointer;
+  
+  &.btn-copy {
+    padding: 0.45rem 0;
+    width: 100%;
+    border: none;
+    background-color: var(--bg-muted);
+    font-weight: var(--font-semibold);
+    text-align: center;
+    color: var(--text-primary);
+
+    &:hover {
+      background-color: var(--primary);
+      color: var(--bg-color);
+      transform: translateY(0);
+    }
+  }
+
+  &.btn-link {
+    font-size: inherit;
+    font-weight: inherit;
+    border: none;
+    color: #1976d2;
+  }
+
+  &.btn-small {
+    border: none;
+    font-size: 0.875rem;
+    font-weight: var(--font-regular);
+    padding: 0;
+    color: var(--text-secondary);
+    cursor: pointer;
+    line-height: 56px;
+    border-radius: 0;
+
+    &:hover {
+      color: var(--text-primary);
+      transform: translateY(0);
+    }
+
+    &.active {
+      color: var(--text-primary);
+      font-weight: var(--font-semibold);
+    }
+
+  }
+}

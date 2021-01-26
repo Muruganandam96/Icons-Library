@@ -1,0 +1,11 @@
+@mixin transition($propery, $duration) {
+  transition: $propery $duration ease;
+
+}
+
+
+@mixin media-breakpoints($device) {
+  @media screen and (min-width: #{$device}) {
+    @content;
+  }
+}
