@@ -45,13 +45,15 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
     selectedlibraryDetail: LibraryDetails;
     searchState: boolean;
+    showScrollTopButton: boolean;
 
 
 
     @HostListener('window:scroll', ['$event'])
-    doSomething(event: Event): void {
+    findScrollPosition(event: Event): void {
 
         this.transformNav = (window.pageYOffset > 100) && (window.pageYOffset > 0);
+        this.showScrollTopButton = window.pageYOffset > 200;
         this.scrollPosition = window.pageYOffset;
     }
 
@@ -210,5 +212,13 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     ngOnDestroy(): void {
         this.unsubscribe$.next();
         this.unsubscribe$.complete();
+    }
+
+    scrollToTop(): void {
+        window.scrollTo({
+            top: 0,
+            left: 0,
+            behavior: 'smooth'
+          });
     }
 }

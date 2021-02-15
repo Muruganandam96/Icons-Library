@@ -54,7 +54,6 @@ export class AsideComponent implements OnInit {
         });
 
         this.router.navigate(['/', library.name, 'filled']);
-        this.activateNav();
     }
 
     showSearch(): void {

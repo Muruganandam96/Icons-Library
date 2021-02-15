@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { MainComponent } from './main/main.component';
 import { AsideComponent } from './aside/aside.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 
 
 
@@ -34,7 +35,7 @@ import { AsideComponent } from './aside/aside.component';
     AppRoutingModule
 
   ],
-  providers: [],
+  providers: [{provide: LocationStrategy, useClass: HashLocationStrategy}],
   bootstrap: [AppComponent]
 })
 

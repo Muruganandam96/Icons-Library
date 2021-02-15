@@ -8,7 +8,7 @@ aside {
   right: 0;
   left: 0;
   bottom: 0;
-  height: 48px;
+  height: 56px;
   width: 100%;
   z-index: 11;
   @include media-breakpoints($breakpoint-md) {
@@ -52,8 +52,12 @@ aside {
 .footer {
   display: flex;
   align-items: center;
-  justify-content: flex-end;
-  padding: 0 1rem;
+  justify-content: center;
+  padding: 1rem 1rem 10rem 1rem;
+
+  @include media-breakpoints($breakpoint-md) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .footer-text {
@@ -67,6 +71,3 @@ aside {
   min-height: 95vh;
 }
 
-.empty-block {
-  margin-bottom: 5.6rem;
-}
