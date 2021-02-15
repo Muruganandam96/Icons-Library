@@ -65,9 +65,9 @@ export class AsideComponent implements OnInit {
         this.navActive = !this.navActive;
         const bodyElement = document.getElementsByTagName('body')[0];
         if (this.navActive) {
-            bodyElement.style.overflowY = 'hidden';
+            bodyElement.classList.add('hide-scroll');
         } else {
-            bodyElement.style.overflowY = 'auto';
+            bodyElement.classList.remove('hide-scroll');
         }
     }
 }

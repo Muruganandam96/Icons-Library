@@ -38,6 +38,7 @@
 
 body {
   overflow-x: hidden;
+  overflow-y: auto;
   background-color: #FAFAFA;
 }
 
@@ -80,5 +81,13 @@ p.icon-label {
 
   p {
     opacity: 0;
+  }
+}
+
+
+.hide-scroll {
+  overflow-y: hidden;
+  @include media-breakpoints($breakpoint-md) {
+    overflow-y: auto;
   }
 }
