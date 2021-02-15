@@ -1,7 +1,6 @@
 import { AfterViewInit, ChangeDetectionStrategy, Component, ElementRef, Input, ViewChild } from '@angular/core';
-import { Icons } from 'src/lib/icon';
 import * as svgtojsx from 'svg-to-jsx';
-import { LibraryDetails } from '../library.model';
+
 
 @Component({
     selector: 'app-icon-grid',
@@ -15,16 +14,16 @@ export class IconGridComponent implements AfterViewInit {
     svgIcon: string;
     search = 'text';
     @Input()
-    get IconName(): string { return this._IconName };
-    set IconName(IconName : string) {
+    get IconName(): string { return this._iconName; }
+    set IconName(IconName: string) {
         this.IconNameAssuch = IconName;
-        this._IconName = IconName.replace(/([A-Z])/g,' $1');
-        this._IconName = this._IconName.charAt(0).toUpperCase()+this._IconName.slice(1);
+        this._iconName = IconName.replace(/([A-Z])/g, ' $1');
+        this._iconName = this._iconName.charAt(0).toUpperCase() + this._iconName.slice(1);
     }
     @Input() svg: string;
 
-    private IconNameAssuch = ''
-    private _IconName = '';
+    private IconNameAssuch = '';
+    private _iconName = '';
 
     constructor(private elRef: ElementRef) {
     }
@@ -38,7 +37,7 @@ export class IconGridComponent implements AfterViewInit {
             this.iconContainer.nativeElement.children[0].setAttribute('height', '24px');
             const label = document.createElement('p');
             label.className += 'icon-label';
-            label.innerHTML = this._IconName;
+            label.innerHTML = this._iconName;
             this.iconContainer.nativeElement.append(label);
         }
     }

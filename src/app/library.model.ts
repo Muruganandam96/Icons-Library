@@ -1,13 +1,13 @@
 export interface LibraryDetails {
-    name: string,
-    type: [],
+    name: string;
+    type: string[];
     typeDetail: {
         filled: string,
         outlined: string,
         duotoned: string
     },
-    image: string,
-    license: string,
-    reportUrl: string,
-    active: boolean
+    image: string;
+    license: string;
+    repoUrl: string;
+    active: boolean;
 }

@@ -13,6 +13,7 @@
   justify-content: flex-end;
   cursor: pointer;
   text-align: center;
+  border: 1px solid transparent;
 
 
   .hover-menu {
@@ -28,11 +29,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
+    border: 1px solid transparent;
 
   }
 
   &:hover {
-    background-color: rgb(255, 255, 255, 0.3);
+    background-color: rgba(211, 210, 219, 0.4);
     backdrop-filter: blur(6px);
     @include transition(transform, 100ms);
 

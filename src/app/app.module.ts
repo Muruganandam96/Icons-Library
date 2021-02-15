@@ -8,6 +8,10 @@ import { DetailspanelComponent } from './detailspanel/detailspanel.component';
 import { DropdownDirective } from './dropdown.directive';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { AppRoutingModule } from './app-routing.module';
+import { MainComponent } from './main/main.component';
+import { AsideComponent } from './aside/aside.component';
+
 
 
 @NgModule({
@@ -17,6 +21,8 @@ import { FormsModule } from '@angular/forms';
     IconGridComponent,
     DetailspanelComponent,
     DropdownDirective,
+    MainComponent,
+    AsideComponent,
 
     
    
@@ -24,7 +30,8 @@ import { FormsModule } from '@angular/forms';
   imports: [
     BrowserModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    AppRoutingModule
 
   ],
   providers: [],

@@ -1,0 +1,61 @@
+<header class="sticky">
+  <div class="search-container"
+  [ngClass]="{'showSearchBar': showSearch}">
+    <img src="assets/search.svg" width="20px" height="20px" alt="Search Icon">
+    <span (click)="showSearchBar();" class="search-text"
+    *ngIf="!showSearch" >Search</span>
+    <form class="search-form" 
+    (ngSubmit)="searchIcons()" #searchForm="ngForm" 
+    *ngIf="showSearch">
+      <input class="form-control" type="search" placeholder="Search"
+        name="searchModel" [(ngModel)]="searchModel" autofocus>
+      <a class="btn btn-link p-3" (click)="hideSearchBar()">Cancel</a>
+    </form>
+   
+  </div>
+  <div class="filter-details  pb-0" *ngIf="!showSearch && iconType.length>1"
+    [ngClass]="{ 'transform-nav' : transformNav , 'no-transform-nav' : !transformNav }"
+   
+  >
+    <ul class="icon-type" >
+      <li class="filter-item" *ngFor="let filter of iconType">
+        <a class="btn btn-small" (click)="filterIcons(filter.type)"
+          [ngClass]="{ 'active': filter.active}">
+          {{ filter.type | titlecase }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</header>
+
+<div class="ml-4 mr-4 mt-64 mb-4 library-details" *ngIf="!showSearch">
+  <h4 class="library-name">
+    {{ selectedlibraryDetail.name}}
+    <span class="external-link"> 
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+        fill="none"  stroke-width="2"
+        stroke-linecap="round" stroke-linejoin="round"
+        class="feather feather-link-2">
+        <path
+          d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3M8 12h8" />
+        </svg>
+    </span>
+  </h4>
+  <div class="license">{{ selectedlibraryDetail.license}} license</div>
+</div>
+
+<div class="icon-grid ml-4 mr-4" [ngClass]="{'mt-grid' : showSearch }">
+  <app-icon-grid [svg]="icon.svg" [IconName]="icon.name"
+    *ngFor="let icon of iconsList"></app-icon-grid>
+</div>
+
+<div class="no-results" *ngIf="noresult && showSearch">
+  <img src="assets/noresults.svg" alt="">
+  <h3 class="pt-6">No results found!</h3>
+  <p class="pt-4">We can't find any item matching your search.</p>
+</div>
+<div class="type-something"
+  *ngIf="!this.searchModel && !noresult && showSearch">
+  <img src="assets/typing.svg" alt="">
+  <h3 class="pt-6">Type something to search</h3>
+</div>

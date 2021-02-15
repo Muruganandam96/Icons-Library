@@ -5,9 +5,9 @@
   --accent: #27C271;
   --text-primary: #333;
   --text-secondary: #636970;
-  --bg-color: #d9e2ee;
+  --bg-color: #fff;
   --bg-muted: #F1EDE9;
-  --bg-muted: #fafafa;
+  --bg-color-op: rgba(255,255,255,0.95);
   --bg-highlight: #323232;
   --bg-neutral: #E2DEDA;
   --font-family-sans-serif: 'Manrope', sans-serif;
@@ -38,7 +38,7 @@
 
 body {
   overflow-x: hidden;
-  background-color: #d9e2ee;
+  background-color: #FAFAFA;
 }
 
 .copyText {
@@ -61,7 +61,7 @@ body {
 p.icon-label {
   padding-top: 0.45rem !important;
   user-select: none;
-  @include transition(400ms, ease-in);
+  @include transition(opacity, 200ms);
   width: 100px;
   white-space: nowrap;
   overflow: hidden;
@@ -69,13 +69,13 @@ p.icon-label {
 }
 
 .icon svg {
-  @include transition(400ms, ease-in-out);
+  @include transition(transform, 200ms);
 }
 
 
 .icon-wrapper:hover {
   svg {
-    transform: scale(1.8);
+    transform: scale(2);
   }
 
   p {

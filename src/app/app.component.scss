@@ -2,220 +2,71 @@
 @import '../styles/1_helpers/mixins';
 @import '../styles/1_helpers/utils';
 
-.main-section {
-  padding-bottom: 1.25rem;
+
+aside {
+  position: fixed;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 48px;
+  width: 100%;
+  z-index: 11;
+  @include media-breakpoints($breakpoint-md) {
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 200px;
+    height: 100%;
+    z-index: 1;
+
+  }
+}
+
+.main-container {
+  padding: 0;
   display: grid;
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'sticky'
+    'fixed'
     'grid';
   grid-template-rows: auto 1fr;
+  overflow-y: auto;
 
   @include media-breakpoints($breakpoint-md) {
     grid-template-areas:
-      'sticky'
+      'fixed'
       'grid';
     grid-template-columns: 1fr;
-
   }
 }
 
 
-.sticky {
-  grid-area: sticky;
-  position: sticky;
-  top: 0;
-  z-index: 9;
-  left: 0;
-  right: 0;
-  background-color: var(--bg-color);
-  min-height: 64px;
-  padding-top: 0.35rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid #ccc;
-  font-size: 0.875rem;
-}
-
-.search-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-  input[type=search] {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1.5rem;
-    font-weight: var(--font-medium);
-    background-color: transparent;
-    border: 1px solid transparent;
-    outline: none;
-    border-radius: 8px;
-  }
-}
-
-.icon-grid-container {
-  grid-area: grid;
-}
-
-.icon-grid {
-  display: grid;
-  gap: 0.875rem;
-  grid-auto-columns: max-content;
-  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-  grid-row-gap: 1rem;
-  grid-auto-rows: max-content;
-  position: relative;
-
-}
-
-.navbar {
-  background: rgba(234, 236, 240, 0.5);
-  backdrop-filter: blur(12px);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.10);
-  display: flex;
-  flex-direction: column;
-  max-width: 100%;
-  border-radius: 0.5rem;
-  position: absolute;
-  z-index: 9;
-  top: 0.8rem;
-  max-height: 480px;
-  overflow-y: auto;
-  padding: 0.5rem 0.5rem;
-}
-
-.nav-icon {
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  width: 24px;
-
-}
-
-.nav-item {
-  display: inline-flex;
-  position: relative;
-  padding: 0.5rem 1rem;
-  margin-bottom: 0.5rem;
-  font-size: 0.875rem;
-  font-weight: var(--font-medium);
-  border-radius: 0.5rem;
-  color: var(--text-primary);
-
-  .nav-link {
-    display: flex;
-    cursor: pointer;
-    align-items: center;
-  }
-
-  &.active {
-    background-color: #d9dce6;
-    font-weight: var(--font-bold);
-
-  }
-
-}
-
-
-.library-details {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  align-items: center;
-}
-
-.icon-type {
-  display: flex;
-  justify-content: center;
-  flex: 0 0 100%;
-  flex-wrap: nowrap;
-  overflow-x: auto;
-  order: 3;
-
+.section-padding {
   @include media-breakpoints($breakpoint-md) {
-    width: auto;
-    order: 2;
-    flex: 0 0 50%;
-  }
+    padding: 0 0 1.25rem 200px;
 
-  >li {
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 }
 
-
-.filter-item {
-  min-width: 100px;
-}
-
-
-.search {
-  flex: 0 0 25%;
-  text-align: right;
+.footer {
   display: flex;
   align-items: center;
   justify-content: flex-end;
-  cursor: pointer;
-  order: 3;
-
-  span {
-    display: none;
-  }
-
-  @include media-breakpoints($breakpoint-md) {
-    span {
-      display: block;
-    }
-  }
+  padding: 0 1rem;
 }
 
-
-.library {
-  position: relative;
-  order: 1;
-
-  @include media-breakpoints($breakpoint-md) {
-    flex: 0 0 25%;
-  }
-
-  .library-name {
-    width: 100%;
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include media-breakpoints($breakpoint-md) {
-      width: fit-content;
-      border: 1px solid #ccc;
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      max-height: 32px;
-    }
-
-  }
+.footer-text {
+  text-align: center;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  opacity: 0.8;
 }
 
-
-.navbar {
-  display: none;
+.main-section {
+  min-height: 95vh;
 }
 
-.open .navbar {
-  display: block;
-}
-
-.search-form {
-    flex: 1;
-}
-
-.no-results, .type-something {
-  display: flex;
-  flex-direction: column;
-  flex:1;
-  justify-content: center;
-  align-items: center;
+.empty-block {
+  margin-bottom: 5.6rem;
 }

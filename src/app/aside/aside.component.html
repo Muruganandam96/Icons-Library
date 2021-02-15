@@ -1,0 +1,32 @@
+<div class="nav-header">
+    <h3 class="brand">my icons</h3>
+</div>
+
+<nav class="nav" [ngClass]="{'slideNav' : this.searchState}">
+      <svg width="24" height="24" fill="none" class="menu md-hide" (click)="activateNav()" 
+      xmlns="http://www.w3.org/2000/svg">
+      <path d="M4 8h16M4" stroke="#000" stroke-width="2" class="line" [ngClass] ="{'closeLine1': this.navActive}"
+        stroke-linecap="round" stroke-linejoin="round" />
+      <path d="M4 16h16" stroke="#000" stroke-width="2" class="line"  [ngClass] ="{'closeLine2': this.navActive}"
+        stroke-linecap="round" stroke-linejoin="round" />
+    </svg>
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" class="search md-hide" (click)="showSearch()"
+      fill="none" stroke="currentColor" stroke-width="2"
+      stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="11" cy="11" r="8" />
+      <path d="M21 21l-4.35-4.35" />
+    </svg>
+    <ul class="navbar" [ngClass]="{'navbar-overlay': this.navActive}" >
+        <h6 class="sub-heading">Popular Libraries</h6>
+        <li class="nav-item" 
+            [attr.data-icon-library]="library.name" 
+            [ngClass] = "{'active': library.active }"
+            *ngFor= "let library of libraries"
+            (click)="navigateTo(library)" >
+            <a class="nav-link " >
+                <img class="nav-icon logo" [src]="library.image"  [alt]="library.name">
+                <span class="pl-3 label">{{library.name}}</span>
+            </a>
+        </li>
+    </ul>
+</nav>
