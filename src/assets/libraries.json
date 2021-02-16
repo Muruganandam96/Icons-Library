@@ -13,7 +13,7 @@
         },
         "image": "../assets/logo/ant.svg",
         "license": "MIT",
-        "repoUrl": ""
+        "link": "https://github.com/ant-design/ant-design-icons"
     },
     {
         "name": "Bootstrap Icons",
@@ -27,7 +27,7 @@
         },
         "image": "../assets/logo/bootstrap.svg",
         "license": "MIT",
-        "repoUrl": ""
+        "link": "https://github.com/twbs/icons"
     },
     {
         "name": "Feather Icons",
@@ -39,7 +39,7 @@
         },
         "image": "../assets/logo/feather.svg",
         "license": "MIT",
-        "repoUrl": ""
+        "link": "https://feathericons.com/"
     },
     {
         "name": "Font Awesome",
@@ -54,8 +54,8 @@
             "brands": "FontAwesomeBrands"
         },
         "image": "../assets/logo/fontawesome.svg",
-        "license": "MIT",
-        "repoUrl": ""
+        "license": "CC BY 4.0",
+        "link": "https://fontawesome.com/"
     },
     {
         "name": "Hero Icons",
@@ -69,6 +69,60 @@
         },
         "image": "../assets/logo/hero.svg",
         "license": "MIT",
-        "repoUrl": ""
+        "link": "https://github.com/tailwindlabs/heroicons"
+    },
+    {
+        "name": "Flat Color Icons",
+        "type": [
+            "filled"
+        ],
+        "typeDetail": {
+            "filled": "FlatColor"
+        },
+        "image": "../assets/logo/placholder.svg",
+        "license": "MIT",
+        "link": "https://github.com/icons8/flat-color-icons"
+    },
+    {
+        "name": "Box Icons",
+        "type": [
+            "filled",
+            "outlined",
+            "brand"
+        ],
+        "typeDetail": {
+            "filled": "BoxIconSolid",
+            "outlined": "BoxIconRegular",
+            "brand": "BoxIconLogo"
+        },
+        "image": "../assets/logo/boxicon.svg",
+        "license": "MIT",
+        "link": "https://github.com/atisawd/boxicons"
+    },
+    {
+        "name": "Dev Icons",
+        "type": [
+            "filled"
+        ],
+        "typeDetail": {
+            "filled": "DevIcons"
+        },
+        "image": "../assets/logo/placholder.svg",
+        "license": "MIT",
+        "link": "https://vorillaz.github.io/devicons/#/main"
+    },
+    {
+        "name": "Remix Icons",
+        "type": [
+            "filled",
+            "outlined"
+        ],
+        "typeDetail": {
+            "filled": "RemixFilled",
+            "outlined": "RemixOutlined"
+        },
+        "image": "../assets/logo/remix.svg",
+        "license": "Apache V2.0",
+        "link": "https://github.com/Remix-Design/RemixIcon"
     }
 ]

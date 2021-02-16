@@ -1,15 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 :root {
-  --primary: #333;
-  --secondary: #F7C945;
-  --accent: #27C271;
+  --primary: #2788dc;
   --text-primary: #333;
-  --text-secondary: #636970;
+  --text-secondary: #68717c;
   --bg-color: #fff;
-  --bg-muted: #F1EDE9;
-  --bg-color-op: rgba(255,255,255,0.95);
-  --bg-highlight: #323232;
-  --bg-neutral: #E2DEDA;
+  --bg-muted: #FAFAFA;
+  --border: #ccc;
+  --bg-color-op: rgb(222, 226, 230, 0.8);
+  --bg-light: rgb(255, 255, 255, 0.8);
   --font-family-sans-serif: 'Manrope', sans-serif;
   --font-extrabold: 800;
   --font-bold: 700;
@@ -34,15 +32,16 @@
 
 
 html {
-  height: 100%;
+  height: -webkit-fill-available;
 }
 
 
 body {
   overflow-x: hidden;
   overflow-y: auto;
-  background-color: #FAFAFA;
-  height: 100%;
+  background-color: var(--bg-muted);
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
 }
 
 .copyText {
@@ -78,6 +77,8 @@ p.icon-label {
 
 
 .icon-wrapper:hover {
+  background-color: var( --bg-color-op);
+  backdrop-filter: blur(6px);
   svg {
     transform: scale(2);
   }

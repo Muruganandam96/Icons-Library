@@ -17,7 +17,7 @@ aside {
     bottom: 0;
     width: 200px;
     height: 100%;
-    z-index: 1;
+    z-index: unset;
 
   }
 }
@@ -68,6 +68,6 @@ aside {
 }
 
 .main-section {
-  min-height: 95vh;
+  min-height: 92vh;
 }
 

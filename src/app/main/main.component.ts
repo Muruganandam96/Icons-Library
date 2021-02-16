@@ -78,7 +78,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
         this.librarySevice.showSearchBar$.subscribe(state => {
             this.showSearch = state;
 
-            if(this.showSearch) {
+            if (this.showSearch) {
                 this.iconsList = [];
             }
         });
@@ -152,13 +152,15 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
         const filter = this.route.snapshot.paramMap.get('filter');
         this.icon.next({
             selectedIconLibrary: libraryName,
-            selectedFilter: filter});
+            selectedFilter: filter
+        });
         this.librarySevice.setSearchStatus(false);
     }
 
     showSearchBar(): void {
         this.librarySevice.setSearchStatus(true);
         this.searchModel = '';
+        setTimeout(() => this.searchInput.nativeElement.focus(), 0);
         if (!this.showSearch) {
             this.librarySevice.setNavActiveStatus(false);
             const obj = {
@@ -219,6 +221,11 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
             top: 0,
             left: 0,
             behavior: 'smooth'
-          });
+        });
+    }
+
+    goToUrl(externalLibraryLink): void {
+        window.open(externalLibraryLink, '_blank')
+        console.log(externalLibraryLink);
     }
 }

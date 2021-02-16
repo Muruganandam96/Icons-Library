@@ -26,7 +26,7 @@ export class LibraryService {
         },
         image: '../assets/logo/ant.svg',
         license: 'MIT',
-        repoUrl: ''
+        link: 'https://github.com/ant-design/ant-design-icons'
     };
 
     private libraryDetails = new BehaviorSubject<LibraryDetails>(this.defaultLibrary as LibraryDetails);

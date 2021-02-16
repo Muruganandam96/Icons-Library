@@ -1,14 +1,12 @@
-<header class="sticky">
-  <div class="search-container"
-  [ngClass]="{'showSearchBar': showSearch}">
+<header class="sticky" [ngClass]="{'showSearchBar': showSearch}">
+  <div class="search-container">
     <img src="assets/search.svg" width="20px" height="20px" alt="Search Icon">
     <span (click)="showSearchBar();" class="search-text"
     *ngIf="!showSearch" >Search</span>
     <form class="search-form" 
-    (ngSubmit)="searchIcons()" #searchForm="ngForm" 
-    *ngIf="showSearch">
+    (ngSubmit)="searchIcons()" #searchForm="ngForm" >
       <input class="form-control" type="search" placeholder="Search"
-        name="searchModel" [(ngModel)]="searchModel" autofocus>
+        name="searchModel" [(ngModel)]="searchModel" #searchInput>
       <a class="btn btn-link p-3" (click)="hideSearchBar()">Cancel</a>
     </form>
    
@@ -28,20 +26,13 @@
   </div>
 </header>
 
-<div class="ml-4 mr-4 mt-64 mb-4 library-details" *ngIf="!showSearch">
+<div class="library-details" *ngIf="!showSearch">
   <h4 class="library-name">
     {{ selectedlibraryDetail.name}}
-    <span class="external-link"> 
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-        fill="none"  stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round"
-        class="feather feather-link-2">
-        <path
-          d="M15 7h3a5 5 0 015 5 5 5 0 01-5 5h-3m-6 0H6a5 5 0 01-5-5 5 5 0 015-5h3M8 12h8" />
-        </svg>
+    <span class="external-link" (click)= "goToUrl(selectedlibraryDetail.link)"> 
     </span>
   </h4>
-  <div class="license">{{ selectedlibraryDetail.license}} license</div>
+  <div class="license">{{ selectedlibraryDetail.license}} License</div>
 </div>
 
 <div class="icon-grid ml-4 mr-4" [ngClass]="{'mt-grid' : showSearch }">
@@ -52,19 +43,21 @@
 <div class="no-results" *ngIf="noresult && showSearch">
   <img src="assets/noresults.svg" alt="">
   <h3 class="pt-6">No results found!</h3>
-  <p class="pt-4">We can't find any item matching your search.</p>
+  <p class="pt-4">Can't find any item matching your search.</p>
 </div>
 <div class="type-something"
-  *ngIf="!this.searchModel && !noresult && showSearch">
+  *ngIf="!this.searchModel && !noresult && showSearch && !iconsList.length">
   <img src="assets/typing.svg" alt="">
   <h3 class="pt-6">Type something to search</h3>
 </div>
 
- <div class="fab" (click)="scrollToTop()" [ngClass]="{'showScrollToTop':showScrollTopButton}">
-  <svg width="24" height="24" viewBox="0 0 20 20" fill="#000"
-    xmlns="http://www.w3.org/2000/svg">
-    <path fill-rule="evenodd" clip-rule="evenodd"
-      d="M5.293 7.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 5.414V17a1 1 0 11-2 0V5.414L6.707 7.707a1 1 0 01-1.414 0z"
-      fill="#fff" /></svg>
-     <label class="label">Go to top</label>
+ <div class="fab" (click)="scrollToTop()" [ngClass]="{'showScrollToTop':showScrollTopButton}" *ngIf="!showSearch">
+  <svg width="29" height="21" viewBox="0 0 29 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="29" height="21">
+    <rect x="0.585938" y="0.546875" width="27.5728" height="19.7479" fill="white"/>
+    </mask>
+    <g mask="url(#mask0)">
+    <path d="M6.83594 12.6017L14.3731 5.06445L21.9103 12.6017" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+    </svg>
 </div>

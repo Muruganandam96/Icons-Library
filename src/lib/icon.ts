@@ -9,8 +9,15 @@ import { FontAwesomeFilled } from 'src/lib/fontawesome-filled';
 import { FontAwesomeOutlined } from 'src/lib/fontawesome-outlined';
 import { HeroSolid } from 'src/lib/hero-solid';
 import { HeroOutlined } from 'src/lib/hero-outlined';
+import { FlatColor } from 'src/lib/flatcolor';
+import { BoxIconSolid } from 'src/lib/boxicon-solid';
+import { BoxIconRegular } from 'src/lib/boxicon-regular';
+import { BoxIconLogo } from 'src/lib/boxicon-logo';
+import { DevIcons } from 'src/lib/devicons';
+import { RemixFilled } from 'src/lib/remix-filled';
+import { RemixOutlined } from 'src/lib/remix-outlined';
 
-export const Icons ={
+export const Icons = {
     AntIconFilled,
     AntIconOutlined,
     AntIconDuotone,
@@ -21,5 +28,12 @@ export const Icons ={
     FontAwesomeFilled,
     FontAwesomeOutlined,
     HeroSolid,
-    HeroOutlined
+    HeroOutlined,
+    FlatColor,
+    BoxIconSolid,
+    BoxIconRegular,
+    BoxIconLogo,
+    DevIcons,
+    RemixFilled,
+    RemixOutlined
 }

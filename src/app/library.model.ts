@@ -8,6 +8,6 @@ export interface LibraryDetails {
     },
     image: string;
     license: string;
-    repoUrl: string;
+    link: string;
     active: boolean;
 }

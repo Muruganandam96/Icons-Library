@@ -1,19 +1,25 @@
-<svg width="120" height="113" viewBox="0 0 120 113" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line x1="11.9164" y1="19.1957" x2="2.48912" y2="46.4886" stroke="black" stroke-width="1.43432" stroke-linecap="round"/>
-<rect x="23.4478" y="16.7534" width="96" height="96" rx="48" fill="#BEC6E0"/>
-<path d="M56.2446 49.2417L49.1404 59.3362" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
-<path d="M92.5815 49.3174L82.1215 57.1259" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
-<path d="M57.6239 58.4544L47.7612 50.1237" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
-<path d="M90.5237 58.4419L84.1794 48.0018" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
-<circle cx="13.486" cy="13.7096" r="12.7517" fill="#F0F0F0" stroke="black" stroke-width="1.43432"/>
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="25" height="25">
-<path d="M24.9687 13.7343C24.9687 20.0574 19.8004 25.1929 13.413 25.1929C7.02558 25.1929 1.8573 20.0574 1.8573 13.7343C1.8573 7.4113 7.02558 2.27576 13.413 2.27576C19.8004 2.27576 24.9687 7.4113 24.9687 13.7343Z" fill="#F0F0F0" stroke="black" stroke-width="1.43432"/>
+<svg width="179" height="142" viewBox="0 0 179 142" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line x1="14.9569" y1="23.5976" x2="2.99677" y2="58.2234" stroke="#515666" stroke-width="1.43432" stroke-linecap="round"/>
+<rect x="29.5537" y="20.7637" width="120.572" height="120.572" rx="60.2861" fill="#AEB4C9"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="26" y="21" width="122" height="121">
+<rect x="26.8608" y="21.2563" width="120.572" height="120.572" rx="60.2861" fill="#B8BDCD"/>
 </mask>
 <g mask="url(#mask0)">
-<path d="M12.4281 29.0509C19.9212 20.0884 20.2058 6.59333 19.4115 0.966078C25.8678 0.233086 38.8433 1.1008 39.0952 10.4356C39.41 22.1041 3.06171 40.254 12.4281 29.0509Z" fill="#FFB74C"/>
+<rect x="29.8569" y="22.8047" width="116.684" height="116.629" rx="58.3144" fill="#B8BDCD"/>
 </g>
-<path d="M11.2155 4.78711C8.92531 5.36609 4.28175 7.94568 4.02881 13.6322" stroke="black" stroke-width="1.43432" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M50.5962 82.6276C57.1106 77.4811 74.0958 70.2759 89.9216 82.6276" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
-<circle opacity="0.45" cx="26.5687" cy="108.044" r="4.00469" fill="#AAB2CB"/>
-<circle opacity="0.45" cx="112.078" cy="14.4848" r="2.00286" fill="#AAB2CB"/>
+<path d="M70.7452 61.5679L61.8225 74.2462" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+<path d="M116.383 61.6628L103.245 71.4699" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+<path d="M72.4775 73.1387L60.0903 62.6756" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+<path d="M113.798 73.1229L105.83 60.0105" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+<circle cx="17.0419" cy="16.9408" r="16.1992" fill="#F0F0F0" stroke="#515666" stroke-width="1.43432"/>
+<mask id="mask1" mask-type="alpha" maskUnits="userSpaceOnUse" x="1" y="1" width="32" height="32">
+<path d="M31.6474 16.972C31.6474 25.0162 25.0727 31.5471 16.9504 31.5471C8.82802 31.5471 2.2533 25.0162 2.2533 16.972C2.2533 8.92771 8.82802 2.39685 16.9504 2.39685C25.0727 2.39685 31.6474 8.92771 31.6474 16.972Z" fill="#F0F0F0" stroke="black" stroke-width="1.43432"/>
+</mask>
+<g mask="url(#mask1)">
+<path d="M15.7133 36.2089C25.1243 24.9524 25.4818 8.00308 24.4842 0.935471C32.593 0.0148613 48.8897 1.10468 49.2061 12.8288C49.6015 27.4841 3.94945 50.2795 15.7133 36.2089Z" fill="#F7C945"/>
+</g>
+<path d="M14.1902 5.73438C11.3139 6.46155 5.48175 9.70141 5.16406 16.8434" stroke="#515666" stroke-width="1.43432" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M63.6509 103.499C71.8327 97.0354 93.1655 87.986 113.042 103.499" stroke="#757D97" stroke-width="2" stroke-linecap="round" stroke-linejoin="bevel"/>
+<circle opacity="0.45" cx="15.3007" cy="135.42" r="5.02973" fill="#AAB2CB"/>
+<circle cx="173.817" cy="17.9142" r="4.60368" fill="#D1D9DC"/>
 </svg>

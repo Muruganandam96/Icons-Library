@@ -14,7 +14,7 @@
     padding: 0 0.8rem;
     background-color: rgba(255, 255, 255, 0.8);
     height: 48px;
-    border-bottom: #ccc solid 1px;
+    border-bottom: var(--border) solid 1px;
     padding: 0 2rem;
     border-right: #f0f0f0 solid 1px;
     display: flex;
@@ -30,8 +30,6 @@
   }
 }
 
-
-
 .search-container {
   display: flex;
   align-items: center;
@@ -46,11 +44,11 @@
 
 
 .nav {
-  background-color: rgba(211, 210, 219, 0.65);
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
+  background-color: var(--bg-color-op);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   height: 100%;
-  border-top: #ccc solid 1px;
+  border-top: var(--border) solid 1px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,7 +57,8 @@
 
 
   @include media-breakpoints($breakpoint-md) {
-    background-color: transparent;
+    background-color: var(--bg-color-op);
+    backdrop-filter: blur(8px);
     border-right: #f0f0f0 solid 1px;
     border-top: none;
     display: block;
@@ -102,7 +101,7 @@
     background-color: rgba(36, 35, 44, 0.08);
     color: #000;
     font-weight: var(--font-bold);
-    border-right: 2px solid #2788dc;
+    border-right: 2px solid var(--primary);
   }
 
   &:hover {
@@ -139,7 +138,7 @@
 .seperator {
   width: 100%;
   height: 1px;
-  background-color: #ccc;
+  background-color: var(--border);
   margin: 0.75rem 0;
 }
 
@@ -170,11 +169,12 @@
     position: unset;
     box-shadow: unset;
     margin: unset;
+    background: unset;
   }
 }
 
 .closeLine1 {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(5.5px) rotate(45deg);
   transform-origin: center;
 }
 
