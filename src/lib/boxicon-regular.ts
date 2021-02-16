@@ -1120,8 +1120,7 @@ export const BoxIconRegular = {
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M19 11h-6V5h-2v6H5v2h6v6h2v-6h6z"/></svg>',
     Pointer:
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M20.978 13.21a1 1 0 00-.396-1.024l-14-10a.999.999 0 00-1.575.931l2 17a1 1 0 001.767.516l3.612-4.416 3.377 5.46 1.701-1.052-3.357-5.428 6.089-1.218a.995.995 0 00.782-.769zm-8.674.31a1 1 0 00-.578.347l-3.008 3.677L7.257 5.127l10.283 7.345-5.236 1.048z"/></svg>',
-    Poll:
-      '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7 11h7v2H7zm0-4h10.97v2H7zm0 8h13v2H7zM4 4h2v16H4z"/></svg>',
+    Poll: '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M7 11h7v2H7zm0-4h10.97v2H7zm0 8h13v2H7zM4 4h2v16H4z"/></svg>',
     Polygon:
       '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><path d="M16.707 2.293A.996.996 0 0016 2H8a.996.996 0 00-.707.293l-5 5A.996.996 0 002 8v8c0 .266.105.52.293.707l5 5A.996.996 0 008 22h8c.266 0 .52-.105.707-.293l5-5A.996.996 0 0022 16V8a.996.996 0 00-.293-.707l-5-5zM20 15.586L15.586 20H8.414L4 15.586V8.414L8.414 4h7.172L20 8.414v7.172z"/></svg>',
     Pound:
@@ -1805,4 +1804,3 @@ export const BoxIconRegular = {
     windowRestore:
       '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M464 0H144c-26.5 0-48 21.5-48 48v48H48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h320c26.5 0 48-21.5 48-48v-48h48c26.5 0 48-21.5 48-48V48c0-26.5-21.5-48-48-48zm-96 464H48V256h320v208zm96-96h-48V144c0-26.5-21.5-48-48-48H144V48h320v320z"/></svg>'
   };
-  

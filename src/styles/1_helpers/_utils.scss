@@ -54,9 +54,6 @@ $sides: (top, right, bottom, left);
   background-color: var(--bg-highlight);
 }
 
-.btn-shadow {
-  box-shadow: 4px 4px 0 0 var(--primary);
-}
 
 .slide-up {
     @include transition(transform, 200ms);
