@@ -55,6 +55,7 @@ $sides: (top, right, bottom, left);
 }
 
 
+
 .slide-up {
     @include transition(transform, 200ms);
 
@@ -84,4 +85,8 @@ $sides: (top, right, bottom, left);
 
 .mt-64 {
   margin-top: 64px;
+}
+
+.mb-64 {
+  margin-bottom: 64px;
 }

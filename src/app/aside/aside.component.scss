@@ -101,7 +101,13 @@
     background-color: rgba(36, 35, 44, 0.08);
     color: #000;
     font-weight: var(--font-bold);
-    border-right: 2px solid var(--primary);
+    border-left: 2px solid var(--primary);
+    border-right: none;
+
+    @include media-breakpoints($breakpoint-md) {
+      border-right: 2px solid var(--primary);
+      border-left: none;
+    }
   }
 
   &:hover {

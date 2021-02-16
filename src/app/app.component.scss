@@ -28,19 +28,15 @@ aside {
   min-height: 100vh;
   grid-template-columns: 1fr;
   grid-template-areas:
-    'fixed'
-    'grid';
-  grid-template-rows: auto 1fr;
+    'grid'
+    'footer';
+  grid-template-rows: 1fr auto;
   overflow-y: auto;
-
-  @include media-breakpoints($breakpoint-md) {
-    grid-template-areas:
-      'fixed'
-      'grid';
-    grid-template-columns: 1fr;
-  }
 }
 
+.main-section {
+  grid-area: grid;
+}
 
 .section-padding {
   @include media-breakpoints($breakpoint-md) {
@@ -50,10 +46,11 @@ aside {
 }
 
 .footer {
+  grid-area: footer;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 1rem 1rem 10rem 1rem;
+  padding: 1rem 1rem 1rem 1rem;
 
   @include media-breakpoints($breakpoint-md) {
     padding: 0.5rem 1rem;
@@ -63,11 +60,5 @@ aside {
 .footer-text {
   text-align: center;
   font-size: 0.75rem;
-  color: var(--text-secondary);
-  opacity: 0.8;
+  color: var(--text-light);
 }
-
-.main-section {
-  min-height: 92vh;
-}
-

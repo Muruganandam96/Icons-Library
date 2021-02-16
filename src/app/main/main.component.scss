@@ -2,10 +2,7 @@
 @import '../../styles/1_helpers/mixins';
 @import '../../styles/1_helpers/utils';
 
-
-
 .sticky {
-  grid-area: fixed;
   position: fixed;
   top: 0;
   z-index: 9;
@@ -75,6 +72,8 @@
 
 .library-name {
   text-align: center;
+  display: flex;
+  font-size: 0.875rem;
 
   .external-link {
     will-change: transform;
@@ -85,8 +84,8 @@
     background: url(/assets/link.svg) center no-repeat;
     background-size: 18px;
     display: inline-block;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     @include transition(transform, 250ms);
 
   }
@@ -94,6 +93,7 @@
   @include media-breakpoints($breakpoint-md) {
     display: flex;
     align-items: center;
+    font-size: inherit;
   }
 
   &:hover {
@@ -121,7 +121,7 @@
     position: unset;
     display: flex;
     justify-content: space-between;
-    margin: 3.75rem 1rem 1rem 1rem;
+    margin: 4rem 1rem 1rem 1rem;
 
   }
 }
@@ -207,11 +207,6 @@
 
 .showSearchBar .search-container {
   display: flex !important;
-}
-
-
-.icon-grid-container {
-  grid-area: grid;
 }
 
 .icon-grid {
@@ -309,23 +304,6 @@
 
   @include media-breakpoints($breakpoint-md) {
     flex: 0 0 25%;
-  }
-
-  .library-name {
-    width: 100%;
-    font-size: 0.875rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    @include media-breakpoints($breakpoint-md) {
-      width: fit-content;
-      border: 1px solid var(--border);
-      padding: 0.5rem 1rem;
-      border-radius: 0.5rem;
-      max-height: 32px;
-    }
-
   }
 }
 

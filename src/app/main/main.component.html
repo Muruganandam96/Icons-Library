@@ -35,7 +35,7 @@
   <div class="license">{{ selectedlibraryDetail.license}} License</div>
 </div>
 
-<div class="icon-grid ml-4 mr-4" [ngClass]="{'mt-grid' : showSearch }">
+<div class="icon-grid ml-4 mr-4" [ngClass]="{'mt-grid' : showSearch }" *ngIf="iconsList.length > 0">
   <app-icon-grid [svg]="icon.svg" [IconName]="icon.name"
     *ngFor="let icon of iconsList"></app-icon-grid>
 </div>
