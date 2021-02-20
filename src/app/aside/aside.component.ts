@@ -19,6 +19,7 @@ export class AsideComponent implements OnInit {
     navState: boolean;
     searchState: boolean;
     navActive = false;
+    filter: string;
 
     constructor(private librarySevice: LibraryService,
         private router: Router) {
@@ -46,14 +47,15 @@ export class AsideComponent implements OnInit {
 
 
     navigateTo(library: LibraryDetails): void {
-
         this.sendSelectedLibraryDetails.emit(library);
         this.setNavState();
         this.libraries.find(libraryObj => {
             libraryObj.active = libraryObj.name === library.name;
+            if (libraryObj.active) {
+                this.filter = libraryObj.type[0];
+            }
         });
-
-        this.router.navigate(['/', library.name, 'filled']);
+        this.router.navigate(['/', library.name, this.filter]);
     }
 
     showSearch(): void {

@@ -83,6 +83,7 @@
   font-size: 0.875rem;
   font-weight: var(--font-medium);
   color: var(--text-primary);
+  border-left: 2px solid transparent;
   cursor: pointer;
 
   @include media-breakpoints($breakpoint-md) {
@@ -102,11 +103,11 @@
     color: #000;
     font-weight: var(--font-bold);
     border-left: 2px solid var(--primary);
-    border-right: none;
+    border-right: 2px solid transparent;
 
     @include media-breakpoints($breakpoint-md) {
       border-right: 2px solid var(--primary);
-      border-left: none;
+      border-left: 2px solid transparent;
     }
   }
 

@@ -10,7 +10,7 @@ import { state } from '@angular/animations';
 export class LibraryService {
 
     constructor(private httpClient: HttpClient) { }
-    readonly url = 'assets/libraries.json';
+    readonly url = 'lib/libraries.json';
 
     defaultLibrary = {
         name: 'Ant Icons',

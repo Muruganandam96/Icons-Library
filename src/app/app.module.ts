@@ -11,6 +11,7 @@ import { MainComponent } from './main/main.component';
 import { AsideComponent } from './aside/aside.component';
 import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SortPipe } from './sort.pipe';
+import { NotfoundComponent } from './notfound/notfound.component';
 
 
 
@@ -23,6 +24,7 @@ import { SortPipe } from './sort.pipe';
     MainComponent,
     AsideComponent,
     SortPipe,
+    NotfoundComponent,
 
     
    

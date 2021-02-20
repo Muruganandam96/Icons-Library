@@ -2,7 +2,7 @@
   <div class="search-container">
     <img src="assets/search.svg" width="20px" height="20px" alt="Search Icon">
     <span (click)="showSearchBar();" class="search-text"
-    *ngIf="!showSearch" >Search</span>
+    *ngIf="!showSearch" >Search <span class="shortcut">(Press '/'' to focus) </span></span>
     <form class="search-form" 
     (ngSubmit)="searchIcons()" #searchForm="ngForm" >
       <input class="form-control" type="search" placeholder="Search"

@@ -62,3 +62,31 @@ aside {
   font-size: 0.75rem;
   color: var(--text-light);
 }
+
+
+.slider {
+  height: 24px;
+  overflow: hidden;
+
+  .btn {
+    height: 24px;
+    margin-bottom: 24px;
+    padding-top: 2px;
+    text-align: center;
+    box-sizing: border-box;
+    display: block;
+  }
+
+  &:hover {
+    .btn {
+    animation: slide 0.5s ease-out;
+  }
+  }
+
+  
+
+  @keyframes slide {
+    0% {margin-top:-24px;}
+    100% {margin-top:0px;}
+  }
+}

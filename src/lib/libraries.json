@@ -53,7 +53,7 @@
             "outlined": "FontAwesomeOutlined",
             "brands": "FontAwesomeBrands"
         },
-        "image": "../assets/logo/fontawesome.svg",
+        "image": "../assets/logo/fontawesome.png",
         "license": "CC BY 4.0",
         "link": "https://fontawesome.com/"
     },

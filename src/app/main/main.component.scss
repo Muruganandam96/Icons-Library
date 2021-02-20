@@ -222,9 +222,7 @@
 
 
 .mt-grid {
-  @include media-breakpoints($breakpoint-md) {
-    margin-top: 3.5rem;
-  }
+  margin-top: 3.5rem;
 }
 
 .grid-margin {
@@ -413,4 +411,13 @@
 .btn-small {
   width: 100%;
   text-align: center;
+}
+
+.shortcut {
+  opacity: 0;
+  
+  @include media-breakpoints($breakpoint-md) {
+    color: var(--text-secondary);
+    opacity: 0.7;
+  }
 }

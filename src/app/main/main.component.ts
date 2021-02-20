@@ -1,4 +1,6 @@
+import { convertActionBinding } from '@angular/compiler/src/compiler_util/expression_converter';
 import { AfterViewInit, Component, ElementRef, EventEmitter, HostListener, Input, OnDestroy, OnInit, Output, ViewChild } from '@angular/core';
+import { Location, LocationStrategy, PathLocationStrategy } from '@angular/common';
 import { ActivatedRoute, Router } from '@angular/router';
 import { BehaviorSubject, Observable, Subject } from 'rxjs';
 import { map, takeUntil } from 'rxjs/operators';
@@ -57,10 +59,21 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
         this.scrollPosition = window.pageYOffset;
     }
 
+    @HostListener('document:keydown', ['$event'])
+    onKeydownHandler(event: KeyboardEvent): void {
+
+        if (event.code === 'Slash') {
+            this.showSearchBar();
+        } else if (event.code === 'Escape') {
+            this.hideSearchBar();
+        }
+    }
+
 
     constructor(private librarySevice: LibraryService,
         private router: Router,
-        private route: ActivatedRoute) {
+        private route: ActivatedRoute,
+        private location: Location) {
     }
 
     ngOnInit(): void {
@@ -74,7 +87,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
                 });
                 this.getIcons();
             });
-
         this.librarySevice.showSearchBar$.subscribe(state => {
             this.showSearch = state;
 
@@ -103,7 +115,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
                 });
             });
         });
-
     }
 
     findIcons(obj: LibraryDetails, filter: string): void {
@@ -148,16 +159,21 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     hideSearchBar(): void {
+
+        this.searchModel = '';
         const libraryName = this.route.snapshot.paramMap.get('name');
         const filter = this.route.snapshot.paramMap.get('filter');
+        this.location.go('/' + libraryName + '/' + filter);
         this.icon.next({
             selectedIconLibrary: libraryName,
             selectedFilter: filter
         });
+
         this.librarySevice.setSearchStatus(false);
     }
 
     showSearchBar(): void {
+        this.location.go('/search');
         this.librarySevice.setSearchStatus(true);
         this.searchModel = '';
         setTimeout(() => this.searchInput.nativeElement.focus(), 0);
@@ -206,10 +222,10 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
 
-    navigateTo(library: LibraryDetails): void {
-        this.name = library.name;
-        this.router.navigate(['/', this.name, 'Filled']);
-    }
+    // navigateTo(library: LibraryDetails): void {
+    //     this.name = library.name;
+    //     this.router.navigate(['/', this.name, 'Filled']);
+    // }
 
     ngOnDestroy(): void {
         this.unsubscribe$.next();

@@ -2,18 +2,109 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="title" content="Icon Collections">
-  <meta name="description" content="Include a collection of popular icons library in one click away.">
+  <meta name="title" content="Icons Nest">
+  <meta name="description" content="Include a collection of popular icon libraries in one click away.">
   <meta name="keywords" content="SVG, Icons, JSX">
   <meta name="theme-color" content="#2A3D4D">
-  <title>Icon Collections</title>
+  <meta itemprop="name" content="Icons Nest">
+  <meta itemprop="description" content="Include a collection of popular icon libraries in one click away.">
+  <meta itemprop="image" content="https://iconsnest.netlify.app/iconsnest.png">
+  <meta property="og:title" content="Icons Nest">
+  <meta property="og:site_name" content="Icons Nest">
+  <meta property="og:description" content="Include a collection of popular icon libraries in one click away.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://iconsnest.netlify.app">
+  <meta property="og:image" content="https://iconsnest.netlify.app/iconsnest.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:alt" content="Icons Nest Logo">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <title>Icons Nest</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1" content="viewport-fit=cover" >
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/x-icon" sizes="32x32" href="favicon32x32.ico">
+  <link rel="icon" type="image/x-icon" sizes="16x16" href="favicon16x16.ico">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <app-root></app-root>
+  <app-root>
+    <style>
+        app-root {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          font-family: -apple-system,
+                        BlinkMacSystemFont,
+                        "Segoe UI",
+                        Roboto,
+                        Oxygen-Sans,
+                        Ubuntu,
+                        Cantarell,
+                        Helvetica,
+                        sans-serif;
+        }
+
+      .loading {
+        text-align: center;
+        display: block;
+        font-size: 1.5rem;
+        margin-top: 2rem;
+        color: #000;
+      }
+      .bouncer {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-end;
+        width: 100px;
+        height: 100px;
+      }
+
+      .bouncer div {
+        width: 20px;
+        height: 20px;
+        background-color: #2788dc;
+        border-radius: 50%;
+        animation: bouncer 0.5s cubic-bezier(0.19, 0.57, 0.3, 0.98) infinite alternate;
+      }
+
+      .bouncer div:nth-child(2) {
+        animation-delay: 0.1s;
+        opacity: 0.8;
+      }
+
+      .bouncer div:nth-child(3) {
+        animation-delay: 0.2s;
+        opacity: 0.6;
+      }
+
+      .bouncer div:nth-child(4) {
+        animation-delay: 0.3s;
+        opacity: 0.4;
+      }
+
+      @keyframes bouncer {
+        from {
+          transform: translateY(0);
+        }
+        to {
+          transform: translateY(-100px);
+        }
+      }
+
+    </style>
+    <div>>
+    <div class="bouncer">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+    <p class="loading">Please wait...</p>
+  </div>
+    
+
+  </app-root>
 </body>
 </html>
