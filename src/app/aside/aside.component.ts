@@ -22,7 +22,7 @@ export class AsideComponent implements OnInit {
     filter: string;
 
     constructor(private librarySevice: LibraryService,
-        private router: Router) {
+                private router: Router) {
     }
 
 
@@ -55,11 +55,18 @@ export class AsideComponent implements OnInit {
                 this.filter = libraryObj.type[0];
             }
         });
+
+        if (this.navActive) {
+            this.activateNav();
+        }
         this.router.navigate(['/', library.name, this.filter]);
     }
 
     showSearch(): void {
         this.librarySevice.setSearchStatus(true);
+        if (this.navActive) {
+            this.activateNav();
+        }
     }
 
     activateNav(): void {

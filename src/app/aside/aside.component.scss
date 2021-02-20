@@ -83,10 +83,11 @@
   font-size: 0.875rem;
   font-weight: var(--font-medium);
   color: var(--text-primary);
-  border-left: 2px solid transparent;
+  border-right: 2px solid transparent;
   cursor: pointer;
 
   @include media-breakpoints($breakpoint-md) {
+    border-left: 2px solid transparent;
     .label {
       display: block;
     }

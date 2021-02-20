@@ -71,9 +71,9 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
 
 
     constructor(private librarySevice: LibraryService,
-        private router: Router,
-        private route: ActivatedRoute,
-        private location: Location) {
+                private router: Router,
+                private route: ActivatedRoute,
+                private location: Location) {
     }
 
     ngOnInit(): void {
@@ -244,7 +244,7 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     goToUrl(externalLibraryLink): void {
-        window.open(externalLibraryLink, '_blank')
+        window.open(externalLibraryLink, '_blank');
         console.log(externalLibraryLink);
     }
 }

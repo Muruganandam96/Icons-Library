@@ -416,7 +416,7 @@
 .shortcut {
   opacity: 0;
   
-  @include media-breakpoints($breakpoint-md) {
+  @include media-breakpoints($breakpoint-lg) {
     color: var(--text-secondary);
     opacity: 0.7;
   }
