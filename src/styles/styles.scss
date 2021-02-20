@@ -93,3 +93,12 @@ p.icon-label {
   }
 }
 
+
+@keyframes copied {
+  from {
+    transform: translateY(40px);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}

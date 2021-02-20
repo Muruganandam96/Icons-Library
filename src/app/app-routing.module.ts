@@ -8,6 +8,11 @@ import { NotfoundComponent } from './notfound/notfound.component';
 
 const routes: Routes = [
     {
+        path: '',
+        component: MainComponent
+    },
+
+    {
         path: ':name/:filter',
         component: MainComponent
     },
@@ -24,7 +29,7 @@ const routes: Routes = [
 
 // configures NgModule imports and exports
 @NgModule({
-    imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload',  scrollPositionRestoration: 'top' })],
+    imports: [RouterModule.forRoot(routes, { onSameUrlNavigation: 'reload', scrollPositionRestoration: 'top' })],
     exports: [RouterModule]
 })
 export class AppRoutingModule { }

@@ -13,8 +13,6 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common';
 import { SortPipe } from './sort.pipe';
 import { NotfoundComponent } from './notfound/notfound.component';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,9 +23,6 @@ import { NotfoundComponent } from './notfound/notfound.component';
     AsideComponent,
     SortPipe,
     NotfoundComponent,
-
-    
-   
   ],
   imports: [
     BrowserModule,

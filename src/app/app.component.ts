@@ -15,6 +15,7 @@ export class AppComponent implements OnInit {
     searchState: boolean;
     constructor(private router: Router,
                 private librarySevice: LibraryService) {
+        window.onpopstate =  (e) => { window.history.forward(); }
     }
 
     ngOnInit(): void {

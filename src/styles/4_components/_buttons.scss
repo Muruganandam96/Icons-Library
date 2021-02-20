@@ -1,6 +1,20 @@
 .btn {
   cursor: pointer;
   
+  &.btn-primary {
+    padding: 0.8rem 1rem;
+    border: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 1rem;
+    background: transparent;
+    border-radius: 0.5rem;
+
+    &:hover {
+      background: var(--primary);
+      border: 1px solid var(--primary);
+      color: #fff;
+    }
+  }
   &.btn-copy {
     padding: 0.45rem 0;
     width: 100%;

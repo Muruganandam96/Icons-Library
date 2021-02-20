@@ -11,6 +11,9 @@ import * as svgtojsx from 'svg-to-jsx';
 export class IconGridComponent implements AfterViewInit {
 
     @ViewChild('icon') iconContainer: ElementRef;
+    @ViewChild('hoverMenu') hoverMenu: ElementRef;
+
+
     svgIcon: string;
     search = 'text';
     @Input()
@@ -44,9 +47,24 @@ export class IconGridComponent implements AfterViewInit {
 
     displayCopiedText(ele: HTMLElement): void {
         const buttonText = ele.innerHTML;
-        ele.innerHTML = 'Copied!';
+        const copied = document.createElement('div');
+        copied.innerHTML = '🎉 Copied!';
+        copied.style.transform = 'translateY(25px)';
+        copied.style.color = 'var(--text-primary)';
+        copied.style.fontWeight = 'var(--font-semibold)';
+        copied.style.fontSize = '0.875rem';
+        copied.className += 'copied-text';
+        copied.style.animation = 'copied 200ms ease-out';
+        this.iconContainer.nativeElement.append(copied);
+        this.hoverMenu.nativeElement.style.display = 'none';
+        const label = this.iconContainer.nativeElement.getElementsByClassName('icon-label')[0] as HTMLElement;
+        console.log(label);
+        label.style.display = 'none';
         setTimeout(() => {
-            ele.innerHTML = buttonText;
+            copied.style.transform = 'translateY(20px) scale(0.6)';
+            this.iconContainer.nativeElement.removeChild(copied);
+            this.hoverMenu.nativeElement.style.display = 'flex';
+            label.style.display = 'block';
         }, 1200);
     }
 

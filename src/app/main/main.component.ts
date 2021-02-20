@@ -159,21 +159,13 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     }
 
     hideSearchBar(): void {
-
         this.searchModel = '';
-        const libraryName = this.route.snapshot.paramMap.get('name');
-        const filter = this.route.snapshot.paramMap.get('filter');
-        this.location.go('/' + libraryName + '/' + filter);
-        this.icon.next({
-            selectedIconLibrary: libraryName,
-            selectedFilter: filter
-        });
-
         this.librarySevice.setSearchStatus(false);
+        this.navigateTo();
     }
 
     showSearchBar(): void {
-        this.location.go('/search');
+        this.location.go('/');
         this.librarySevice.setSearchStatus(true);
         this.searchModel = '';
         setTimeout(() => this.searchInput.nativeElement.focus(), 0);
@@ -226,6 +218,17 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     //     this.name = library.name;
     //     this.router.navigate(['/', this.name, 'Filled']);
     // }
+
+    navigateTo(): void {
+        this.icon$.subscribe(data => {
+            this.router.navigate(['/', data.selectedIconLibrary , data.selectedFilter]);
+            this.icon.next({
+                selectedIconLibrary: data.selectedIconLibrary,
+                selectedFilter: data.selectedFilter,
+            });
+        });
+    }
+
 
     ngOnDestroy(): void {
         this.unsubscribe$.next();
