@@ -49,8 +49,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
     searchState: boolean;
     showScrollTopButton: boolean;
 
-
-
     @HostListener('window:scroll', ['$event'])
     findScrollPosition(event: Event): void {
 
@@ -212,12 +210,6 @@ export class MainComponent implements OnInit, AfterViewInit, OnDestroy {
             this.noresult = this.iconsList.length === 0;
         }
     }
-
-
-    // navigateTo(library: LibraryDetails): void {
-    //     this.name = library.name;
-    //     this.router.navigate(['/', this.name, 'Filled']);
-    // }
 
     navigateTo(): void {
         this.icon$.subscribe(data => {
