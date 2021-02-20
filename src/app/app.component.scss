@@ -11,6 +11,7 @@ aside {
   height: 56px;
   width: 100%;
   z-index: 11;
+
   @include media-breakpoints($breakpoint-md) {
     top: 0;
     left: 0;
@@ -61,6 +62,7 @@ aside {
   text-align: center;
   font-size: 0.75rem;
   color: var(--text-light);
+  z-index: 12;
 }
 
 
@@ -79,14 +81,19 @@ aside {
 
   &:hover {
     .btn {
-    animation: slide 0.5s ease-out;
-  }
+      animation: slide 0.5s ease-out;
+    }
   }
 
-  
+
 
   @keyframes slide {
-    0% {margin-top:-24px;}
-    100% {margin-top:0px;}
+    0% {
+      margin-top: -24px;
+    }
+
+    100% {
+      margin-top: 0px;
+    }
   }
 }
